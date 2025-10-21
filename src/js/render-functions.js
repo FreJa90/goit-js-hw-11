@@ -3,7 +3,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const imgGallery = document.querySelector('.gallery');
-const formLoad = document.querySelector('#loader');
+const formLoad = document.querySelector('.loader');
 
 let lightbox = new SimpleLightbox('.gallery a', {
   sourceAttr: 'href',
@@ -30,10 +30,10 @@ export default function createGallery(array) {
     <img class="gallery-image" src="${webformatURL}" alt="${tags}"/>
     </a>
     <div class="card-info">
-    <p>${likes}</p>
-    <p>${views}</p>
-    <p>${comments}</p>
-    <p>${downloads}</p></div>
+    <p>Likes <span>${likes}</span></p>
+    <p>Views <span>${views}</span></p>
+    <p>Comments <span>${comments}</span></p>
+    <p>Downloads <span>${downloads}</span></p></div>
     </li>`
     )
     .join(' ');
